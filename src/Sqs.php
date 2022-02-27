@@ -24,6 +24,13 @@ class Sqs
     {
     }
 
+    public function __debugInfo(): ?array
+    {
+        return [
+            'sqsClient' => '** Instance of ' . get_class($this->sqsClient),
+        ];
+    }
+
     /**
      * @param array<string,string> $attributes
      * @throws QueueNotFoundException
