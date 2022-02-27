@@ -1,0 +1,37 @@
+{
+    "name": "szemul/sqs-queue",
+    "description": "Queue handler for AWS SQS",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.0",
+        "aws/aws-sdk-php": "^3.210.0",
+        "szemul/queue": "dev-main"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0.0",
+        "jetbrains/phpstorm-attributes": "^1.0",
+        "mockery/mockery": "^1.0",
+        "phpstan/phpstan": "^1.4.6",
+        "phpunit/phpunit": "^9.5.5",
+        "szemul/error-handler": "^1.0.0",
+        "szemul/helper": "^1.0.0"
+    },
+    "provide": {
+        "szemul/queue-implementation": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Szemul\\SqsQueue\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Szemul\\SqsQueue\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
