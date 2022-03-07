@@ -39,6 +39,8 @@ class SqsQueue implements ConsumerInterface, DelayCapablePublisherInterface
     {
         if ($message instanceof Message) {
             $this->sqs->deleteMessage($message->getReceiptHandle(), $this->queueConfig->queueName);
+
+            return;
         }
 
         throw new RuntimeException(
