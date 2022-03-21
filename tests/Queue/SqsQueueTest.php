@@ -116,7 +116,6 @@ class SqsQueueTest extends TestCase
         $this->expectMessageSentAndThrowException($message, 5);
 
         $this->getSut()->publishDelayed($message, new \DateInterval('PT5S'));
-
     }
 
     private function getSut(): SqsQueue
