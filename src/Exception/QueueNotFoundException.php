@@ -7,6 +7,7 @@ use Aws\Sqs\Exception\SqsException;
 use Exception;
 use JetBrains\PhpStorm\Pure;
 
+/** @codeCoverageIgnore */
 class QueueNotFoundException extends Exception
 {
     #[Pure]

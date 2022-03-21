@@ -18,7 +18,7 @@
         "szemul/helper": "^1.0.0"
     },
     "provide": {
-        "szemul/queue-implementation": "dev-main"
+        "szemul/queue-implementation": "1.0.0"
     },
     "autoload": {
         "psr-4": {

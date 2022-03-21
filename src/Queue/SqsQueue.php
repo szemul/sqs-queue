@@ -52,7 +52,7 @@ class SqsQueue implements ConsumerInterface, DelayCapablePublisherInterface
     public function publishMessage(MessageInterface $message): void
     {
         try {
-            $this->sqs->sendMessage($this->queueConfig->queueName, $message);
+            $this->sqs->sendMessage($this->queueConfig->queueName, $message, 0);
         } catch (\Throwable $e) {
             throw new PublishingFailedException($message, $e->getMessage(), $e->getCode(), $e);
         }

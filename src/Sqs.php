@@ -24,7 +24,8 @@ class Sqs
     {
     }
 
-    public function __debugInfo(): ?array
+    /** @return array<string,mixed> */
+    public function __debugInfo(): array
     {
         return [
             'sqsClient' => '** Instance of ' . get_class($this->sqsClient),
