@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Szemul\SqsQueue\Message;
 
+use Carbon\Carbon;
+
 class Message extends \Szemul\Queue\Message\Message
 {
     /**
@@ -18,7 +20,9 @@ class Message extends \Szemul\Queue\Message\Message
         protected array $attributes = [],
         protected array $messageAttributes = [],
     ) {
-        parent::__construct($jobName, $payload, $queueIdentifier);
+        $createdAt = Carbon::now();
+
+        parent::__construct($jobName, $payload, $createdAt, $queueIdentifier);
     }
 
     public function getReceiptHandle(): ?string
