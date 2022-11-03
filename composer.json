@@ -6,7 +6,8 @@
     "require": {
         "php": "^8.0",
         "aws/aws-sdk-php": "^3.210.0",
-        "szemul/queue": "^1.0.0"
+        "szemul/queue": "^2.0.0",
+        "szemul/queue-worker": "^2.0.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0.0",
@@ -32,6 +33,9 @@
     },
     "config": {
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.0.0"
+        }
     }
 }
